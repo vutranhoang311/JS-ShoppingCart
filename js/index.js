@@ -188,12 +188,8 @@ const decreaseInCart = (id) => {
   renderCart();
 };
 const deleteInCart = (id) => {
-  const foundIndex = cart.findIndex((item, index) => {
-    if (item.product.id === id) {
-      return index;
-    }
-  });
   if (confirm("Bạn muốn xoá sản phẩm này khỏi giỏ hàng?")) {
+    const foundIndex = cart.findIndex((item) => item.product.id === id);
     cart.splice(foundIndex, 1);
     renderCart();
     saveCartToLocalStorage();

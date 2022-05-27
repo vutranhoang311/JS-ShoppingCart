@@ -300,3 +300,4 @@ const searchElement = document.getElementById("inputSearch");
 searchElement.addEventListener("input", () =>
   searchProduct(searchElement.value)
 );
+
